@@ -8,7 +8,7 @@ from qiskit_machine_learning.algorithms.classifiers import VQC
 # from qiskit.primitives import Sampler
 from qiskit.primitives import StatevectorSampler as Sampler # for local CPU rather than a real quantum ahrdware provider
 
-from circuits import get_quantum_Circuits
+from circuits import get_quantum_circuits
 
 algorithm_globals.random_seed = 42
 
@@ -24,7 +24,7 @@ def train_model():
     X_train, y_train = X[:1000], y[:1000].astype(int)
 
     # get Quantum Architecture
-    feature_map, ansatz = get_quantum_Circuits(num_qubits=4, reps=3)
+    feature_map, ansatz = get_quantum_circuits(num_qubits=4, reps=3)
 
     # Setup the Optimizer and Sampler
     # COBYLA does not need to know the 'slope' of the math

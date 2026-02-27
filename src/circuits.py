@@ -1,6 +1,6 @@
 from qiskit.circuit.library import ZZFeatureMap, RealAmplitudes
 
-def get_quantum_Circuits(num_qubits=4, reps=3):
+def get_quantum_circuits(num_qubits=4, reps=3):
     """ 
     Creates a hybrid quantum circuit for binary classification.
     """
@@ -16,7 +16,7 @@ def get_quantum_Circuits(num_qubits=4, reps=3):
 
 if __name__ == "__main__":
 
-    fm,ans = get_quantum_Circuits()
+    fm,ans = get_quantum_circuits()
     print(f"Feature Map Qubits: {fm.num_qubits}, Ansatz Parameters: {ans.num_parameters}")
  
     circuit = fm.compose(ans)
