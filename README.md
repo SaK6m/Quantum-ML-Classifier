@@ -35,3 +35,10 @@ The model uses a 4-qubit circuit designed in Qiskit, consisting of two main func
 * `notebooks/`: Exploratory data analysis and circuit visualization.
 * `data/`: (Local only) Preprocessed `.npz` files.
 * `src/`: Core logic for circuit construction and model training.
+
+-----
+## 🚀 Results
+* **Training Accuracy**: 75% (using 100 samples from 14,780).
+* **Optimizer**: COBYLA (50 iterations).
+* **Quantum Architecture**: 4 Qubits
+* **Ansatz Depth(reps)**: 3 (16 trainable parameters)
