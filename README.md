@@ -42,3 +42,9 @@ The model uses a 4-qubit circuit designed in Qiskit, consisting of two main func
 * **Optimizer**: COBYLA (50 iterations).
 * **Quantum Architecture**: 4 Qubits
 * **Ansatz Depth(reps)**: 3 (16 trainable parameters)
+
+# 🚀 Results
+* **Training Accuracy**: 92.90% (using 1000 samples from 14,780).
+* **Optimizer**: COBYLA (100 iterations).
+* **Quantum Architecture**: 4 Qubits
+* **Ansatz Depth(reps)**: 3 (16 trainable parameters)

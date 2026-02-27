@@ -20,14 +20,14 @@ def train_model():
     # X with 4 values (PCA) and Y with 0 or 1 (1 value)
     X, y = data['X'], data['y']
 
-    X_train, y_train = X[:100], y[:100].astype(int)
+    X_train, y_train = X[:1000], y[:1000].astype(int)
 
     # get Quantum Architecture
     feature_map, ansatz = get_quantum_Circuits(num_qubits=4, reps=3)
 
     # Setup the Optimizer and Sampler
     # COBYLA does not need to know the 'slope' of the math
-    optimizer = COBYLA(maxiter=50)
+    optimizer = COBYLA(maxiter=100)
     sampler = Sampler()
 
     vqc = VQC(feature_map=feature_map,
