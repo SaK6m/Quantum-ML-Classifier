@@ -23,7 +23,7 @@ def train_model():
     X_train, y_train = X[:100], y[:100].astype(int)
 
     # get Quantum Architecture
-    feature_map, ansatz = get_quantum_Circuits(num_qubits=4)
+    feature_map, ansatz = get_quantum_Circuits(num_qubits=4, reps=3)
 
     # Setup the Optimizer and Sampler
     # COBYLA does not need to know the 'slope' of the math
