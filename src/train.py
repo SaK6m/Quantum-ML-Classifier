@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import json
 
 from qiskit_algorithms.optimizers import COBYLA
 from qiskit_algorithms.utils import algorithm_globals
@@ -41,6 +42,16 @@ def train_model():
 
     score = vqc.score(X_train, y_train)
     print(f"Training Accuracy: {score * 100:.2f}%")
+
+
+    # extract only the weighths
+    optimized_weights = vqc.weights.tolist()
+
+    model_path = os.path.join(current_dir, '../models/vqc_weights.json')
+
+    with open(model_path, 'w') as f:
+        json.dump(optimized_weights, f)
+    print(f"Optimized weights saved successfully to {model_path}!")
 
 if __name__ == "__main__":
     train_model()
